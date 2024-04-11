@@ -12,7 +12,7 @@ class Reshape(Layer):
         '''
         return np.reshape(input, self.output_shape)
 
-    def backward(self, output_gradient):
+    def backward(self, output_gradient, learning_rate):
         '''
         Reshape output to the input shape
         '''

@@ -48,7 +48,7 @@ class Convolutional(Layer):
         **************
         '''
         for i in range(self.depth):
-            for j in range(self.input):
+            for j in range(self.input_depth):
                 kernels_gradient[i, j] =signal.correlate2d(self.input[j], output_gradient[i], "valid")
                 input_gradient[j] += signal.convolve2d(output_gradient[i], self.kernels[i, j], "full")
 
