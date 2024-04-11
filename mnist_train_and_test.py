@@ -61,5 +61,4 @@ for x,y in zip(x_test, y_test):
     output = x
     for layer in network:
         output = layer.forward(output)
-    print(output)
     print(f"pred: {np.argmax(output)}, true: {np.argmax(y)}")
